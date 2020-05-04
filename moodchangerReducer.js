@@ -4,26 +4,24 @@ function rootReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case "DISAPPOINTED":
       console.log("Made it into DISAPPOINTED case in rootReducer")
-      return { ...state, mood: "(*ノ_<*)" };
+      return { ...state, mood: action.payload };
 
     case "VOMIT":
-      return { ...state, mood: "( ﾟ ３ﾟ)≡@" };
+      return { ...state, mood: action.payload };
 
     case "BEG":
-      return { ...state, mood: "（＾人＾）" };
+      return { ...state, mood: action.payload };
 
     case "SPARKLE":
-      return { ...state, mood: "＋。゜~”（゜∀゜）゜。＋" };
+      return { ...state, mood: action.payload };
 
     case "DANCE":
-      return { ...state, mood: "(ノ・・)ノ" };
+      return { ...state, mood: action.payload };
     
       case "BLUSH":
-      return { ...state, mood: "(´∀｀•)" };
+      return { ...state, mood: action.payload };
 
     default:
       return state;
   }
 }
-
-const store = Redux.createStore(rootReducer);
